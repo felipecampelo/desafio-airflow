@@ -52,7 +52,11 @@ airflow standalone
 
 Nesse momento, o airflow local irá iniciar e o ambiente poderá ser acessado via localhost:8080 no browser. Você poderá usar o login fornecido pelo Airflow no terminal, cujo user é admin.
 
-### 8. Para executar a DAG, simplesmente apertamos o botão de play da mesma no ambiente:
+### 8. Vá no menu Admin > Variables e adicione o seu e-mail em uma variável com chave "my_email" como na imagem abaixo:
+
+![image](https://user-images.githubusercontent.com/13797593/236270667-7e61a445-a0a4-4ba1-b676-605cca807040.png)
+
+### 9. Para executar a DAG, simplesmente apertamos o botão de play da mesma no ambiente:
 
 ![image](https://user-images.githubusercontent.com/13797593/236197826-6b75f078-0666-4483-ac41-963310701dee.png)
 
