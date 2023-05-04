@@ -16,13 +16,20 @@ git clone https://github.com/felipecampelo/desafio-airflow.git
 virtualenv venv -p python3
 source venv/bin/activate
 ```
-### 3. Instale as dependências do requirements.txt:
+
+### 3. Execute o arquivo install.bash:
+
+```
+bash install.sh
+```
+
+### 4. Instale as dependências do requirements.txt:
 
 ```
 pip install -r requirements.txt
 ```
 
-### 4. Entre no arquivo airflow.cfg que está dentro da pasta airflow-data e modifique a pasta de onde será armazenadas as dags do projeto:
+### 5. Entre no arquivo airflow.cfg que está dentro da pasta airflow-data e modifique a pasta de onde será armazenadas as dags do projeto:
 
 ```
 # The folder where your airflow pipelines live, most likely a
@@ -30,13 +37,13 @@ pip install -r requirements.txt
 dags_folder = YOUR_DAGS_FOLDER
 ```
 
-### 5. Configure o ambiente para dizer onde vão ficar os arquivos de config do airflow:
+### 6. Configure o ambiente para dizer onde vão ficar os arquivos de config do airflow:
 
 ```
 export AIRFLOW_HOME=./airflow-data
 ```
 
-### 6. Agora, é necessário resetar o db do airflow e depois podemos iniciá-lo.
+### 7. Agora, é necessário resetar o db do airflow e depois podemos iniciá-lo.
 
 ```
 airflow db reset
@@ -45,7 +52,7 @@ airflow standalone
 
 Nesse momento, o airflow local irá iniciar e o ambiente poderá ser acessado via localhost:8080 no browser. Você poderá usar o login fornecido pelo Airflow no terminal, cujo user é admin.
 
-### 7. Para executar a DAG, simplesmente apertamos o botão de play da mesma no ambiente:
+### 8. Para executar a DAG, simplesmente apertamos o botão de play da mesma no ambiente:
 
 ![image](https://user-images.githubusercontent.com/13797593/236197826-6b75f078-0666-4483-ac41-963310701dee.png)
 
