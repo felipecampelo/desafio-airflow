@@ -74,7 +74,7 @@ def query_result():
     # Creating a query to join the DataFrames
     query = """
     SELECT 
-        SUM(Quantity) 
+        SUM(Quantity) AS Quantidade
     FROM 
         df_orderDetails
     JOIN 
@@ -89,6 +89,7 @@ def query_result():
 
     # Saving the result in a Pandas DataFrame
     df_result = psql.sqldf(query)
+    df_result = df_result.astype(str)
 
     # Converting Pandas DataFrame to txt
     df_result.to_csv('count.txt', header=None, index=None, mode='w')
